@@ -76,5 +76,5 @@ loaded_messages = llms.load_messages("conversation.yml")
 
 ## Development Notes
 
-- Streaming and visualization features: disregarded from llms
-- Distributed chat history dump comparing to llms
+- Streaming and visualization features: disregarded from [llms](https://github.com/SanBingYouYong/llms)
+- "Distributed" chat history dump comparing to [llms](https://github.com/SanBingYouYong/llms)
