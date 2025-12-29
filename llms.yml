@@ -1,0 +1,31 @@
+profiles:
+  # example_profile:
+  #   # doc: link to official documentation of that API provider
+  #   url: openai compatible api base url  # required
+  #   api_key_env: PROVIDER_API_KEY env variable name  # required
+  #   model: exact model name tag to be sent  # required
+  #   vision: true  # whether the model supports vision input (e.g. VLM or not) - sanity check before sending requests
+  #   accepts_sys_msg: true  # whether the model/provider accepts system messages (some only support the user/assistant role in chat messages)
+  #   request_params:  # additional kw-args to be sent in the client.chat.completions.create() call
+  #     temperature: 1
+  deepseek-v3.2:
+    # doc: https://api-docs.deepseek.com/zh-cn/api/create-chat-completion
+    url: https://api.deepseek.com
+    api_key_env: DEEPSEEK_API_KEY
+    model: deepseek-chat
+    vision: false
+    accepts_sys_msg: true
+    request_params: 
+      temperature: 1
+  qwen3vl-plus:
+    # doc: https://bailian.console.aliyun.com/?tab=model#/model-market/detail/qwen3-vl-plus
+    url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    api_key_env: ALIYUN_API_KEY
+    model: qwen3-vl-plus
+    vision: true
+    accepts_sys_msg: true
+    request_params: 
+      temperature: 1
+      extra_body:
+        enable_thinking: true
+        thinking_budget: 81920
