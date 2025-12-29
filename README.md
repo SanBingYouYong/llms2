@@ -74,7 +74,5 @@ export EXAMPLE_API_KEY=your_api_key_here
 
 ## Development Notes
 
-- Streaming and vision features: Not required for base implementation
-  - 不用支持stream和vis
-- Distributed chat history dump support planned
-  - 分布式chat history dump
+- Streaming and visualization features: disregarded from llms
+- Distributed chat history dump comparing to llms
