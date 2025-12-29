@@ -9,11 +9,35 @@ Install the package using pip:
 ```bash
 pip install -e .
 ```
+- or `pip install git+https://github.com/SanBingYouYong/llms2.git`
 
 Or with uv:
 
 ```bash
 uv pip install -e .
+```
+- or `uv add git+https://github.com/SanBingYouYong/llms2.git`
+
+## Configuration
+
+Create a `llms.yml` file with your LLM profiles:
+
+```yaml
+profiles:
+  example_profile:
+    url: https://api.example.com
+    api_key_env: EXAMPLE_API_KEY
+    model: model-name
+    vision: false
+    accepts_sys_msg: true
+    request_params:
+      temperature: 1
+```
+
+Set the corresponding environment variables in a `.env` file or export them:
+
+```bash
+export EXAMPLE_API_KEY=your_api_key_here
 ```
 
 ## Usage
@@ -40,28 +64,6 @@ llms.save_messages("deepseek-v3.2", messages, "conversation.yml")
 
 # Load conversation history
 loaded_messages = llms.load_messages("conversation.yml")
-```
-
-## Configuration
-
-Create a `llms.yml` file with your LLM profiles:
-
-```yaml
-profiles:
-  example_profile:
-    url: https://api.example.com
-    api_key_env: EXAMPLE_API_KEY
-    model: model-name
-    vision: false
-    accepts_sys_msg: true
-    request_params:
-      temperature: 1
-```
-
-Set the corresponding environment variables in a `.env` file or export them:
-
-```bash
-export EXAMPLE_API_KEY=your_api_key_here
 ```
 
 ## Features
