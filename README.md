@@ -20,7 +20,7 @@ uv pip install -e .
 
 ## Configuration
 
-Create a `llms.yml` file with your LLM profiles:
+Create a `llms.yml` file with your LLM profiles in your project root (see an [example](./llms.yml) in this project root):
 
 ```yaml
 profiles:
@@ -45,13 +45,13 @@ export EXAMPLE_API_KEY=your_api_key_here
 ```python
 from llms2 import LLMS
 
-# Initialize with configuration file (default: llms.yml)
+# Initialize with configuration file (default: llms.yml, you may as well call it differently and pass in the path)
 llms = LLMS()
 
 # Prepare messages
 messages = llms.prepare_messages(
     prompt="Hello, how are you?",
-    system_msg="You are a helpful assistant."
+    system_msg="When the user asks you how are you, always reply with hello world."
 )
 
 # Query an LLM profile
@@ -72,9 +72,8 @@ loaded_messages = llms.load_messages("conversation.yml")
 - Vision model support for image inputs
 - Conversation history management (save/load)
 - System message support
-- Configurable request parameters per profile
 
 ## Development Notes
 
-- Streaming and visualization features: disregarded from [llms](https://github.com/SanBingYouYong/llms)
+- Streaming and visualization features: no longer supported comparing to [llms](https://github.com/SanBingYouYong/llms)
 - "Distributed" chat history dump comparing to [llms](https://github.com/SanBingYouYong/llms)
