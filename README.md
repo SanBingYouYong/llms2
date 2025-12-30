@@ -37,7 +37,7 @@ profiles:
 Set the corresponding environment variables in a `.env` file or export them:
 
 ```bash
-export EXAMPLE_API_KEY=your_api_key_here
+EXAMPLE_API_KEY=your_api_key_here
 ```
 
 ## Usage
